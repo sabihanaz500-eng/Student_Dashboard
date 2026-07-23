@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Result</title>
+
+<style>
+body {
+    font-family: Arial;
+    background:#eef2ff;
+}
+
+.result-card {
+    width:85%;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 10px gray;
+}
+
+.header {
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-radius:10px;
+}
+
+select {
+    padding:10px;
+    font-size:16px;
+    margin:20px 0;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td {
+    border:1px solid gray;
+    padding:10px;
+    text-align:center;
+}
+
+th {
+    background:#2563eb;
+    color:white;
+}
+
+.summary {
+    background:#dcfce7;
+    padding:15px;
+    margin-top:20px;
+    border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="result-card">
+
+<div class="header">
+<h1>Student Result</h1>
+<p>Diploma in Computer Science Engineering</p>
+</div>
+
+
+<h3>Select Semester</h3>
+
+<select onchange="showResult(this.value)">
+
+<option value="">Select Semester</option>
+<option value="1">1st Semester</option>
+<option value="2">2nd Semester</option>
+<option value="3">3rd Semester</option>
+
+</select>
+
+
+<div id="result"></div>
+
+
+</div>
+
+
+<script>
+
+function showResult(sem){
+
+let data="";
+
+if(sem=="1"){
+data=`
+
+<h2>1st Semester Result</h2>
+
+<table>
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+</tr>
+
+<tr><td>Mathematics</td><td>90</td></tr>
+<tr><td>Physics</td><td>94</td></tr>
+<tr><td>Engineering Mechanics</td><td>95</td></tr>
+<tr><td>Environmental Science</td><td>45/50</td></tr>
+<tr><td>Fundamental of Electrical and Electronics Engineering</td><td>86</td></tr>
+<tr><td>Engineering Physics Lab</td><td>88</td></tr>
+<tr><td>Engineering Mechanics Lab</td><td>87</td></tr>
+<tr><td>Engineering Workshop Lab</td><td>89</td></tr>
+<tr><td>Chemistry</td><td>84</td></tr>
+<tr><td>Engineering Graphics</td><td>86</td></tr>
+<tr><td>Communication Skills</td><td>83</td></tr>
+
+</table>
+
+<div class="summary">
+
+<b>Total Marks:</b> 927 / 1050 <br>
+
+<b>Percentage:</b> 88.28% <br>
+
+<b>Result:</b> Pass <br>
+
+<b>SGPA:</b> 8.8 <br>
+
+<b>CGPA:</b> 8.8
+
+</div>
+
+`;
+}
+
+
+else if(sem=="2"){
+data=`
+
+<h2>2nd Semester Result</h2>
+
+<table>
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+</tr>
+
+<tr><td>Mathematics</td><td>98</td></tr>
+<tr><td>Physics</td><td>98</td></tr>
+<tr><td>Introduction to IT System</td><td>77</td></tr>
+<tr><td>Chemistry</td><td>81</td></tr>
+<tr><td>Sports and Yoga</td><td>40/50</td></tr>
+<tr><td>Physics Lab</td><td>92</td></tr>
+<tr><td>Chemistry Lab</td><td>89</td></tr>
+<tr><td>Graphics Lab</td><td>95</td></tr>
+<tr><td>IT Lab</td><td>90</td></tr>
+
+</table>
+
+<div class="summary">
+
+<b>Total Marks:</b> 762 / 900 <br>
+
+<b>Percentage:</b> 84.66% <br>
+
+<b>Result:</b> Pass <br>
+
+<b>SGPA:</b> 8.5 <br>
+
+<b>CGPA:</b> 8.65
+
+</div>
+
+`;
+}
+
+
+else if(sem=="3"){
+data=`
+<h2>3rd Semester Result</h2>
+
+<table>
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+</tr>
+
+<tr><td>Web Development</td><td>85</td></tr>
+<tr><td>Python Programming</td><td>90</td></tr>
+<tr><td>DBMS</td><td>88</td></tr>
+
+</table>
+
+<div class="summary">
+
+<b>Total Marks:</b> 263 / 300 <br>
+
+<b>Percentage:</b> 87.6% <br>
+
+<b>Result:</b> Pass <br>
+
+<b>SGPA:</b> 8.7 <br>
+
+<b>CGPA:</b> 8.67
+
+</div>
+`;
+}
+
+document.getElementById("result").innerHTML=data;
+
+}
+
+</script>
+
+
+</body>
+</html>
+

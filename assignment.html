@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignments</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f4f7fc;
+margin:0;
+padding:20px;
+}
+h1{
+text-align:center;
+color:#1e3a8a;
+}
+.card{
+background:#fff;
+padding:15px;
+margin:15px auto;
+max-width:700px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+.card h3{
+margin:0;
+color:#2563eb;
+}
+.card p{
+margin:8px 0;
+}
+.btn{
+display:inline-block;
+padding:10px 18px;
+margin:5px;
+border:none;
+border-radius:8px;
+background:#2563eb;
+color:#fff;
+text-decoration:none;
+cursor:pointer;
+}
+.btn:hover{
+background:#1d4ed8;
+}
+.status{
+float:right;
+background:#f59e0b;
+color:#fff;
+padding:5px 10px;
+border-radius:20px;
+font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📝 Assignments</h1>
+
+<div class="card">
+<span class="status">Pending</span>
+<h3>Web Development Assignment</h3>
+<p>Due Date : 30 July 2026</p>
+
+<a href="#" class="btn">View Assignment</a>
+<a href="#" class="btn">Submit Assignment</a>
+</div>
+
+<div class="card">
+<span class="status">Submitted</span>
+<h3>Python Assignment</h3>
+<p>Submitted Successfully</p>
+
+<a href="#" class="btn">View Assignment</a>
+<a href="#" class="btn">View Submitted</a>
+</div>
+<div class="card">
+<h3>📤 Submit Assignment</h3>
+
+<p><b>Name:</b> Sabiha Naz</p>
+<p><b>Roll No:</b> 25DPCS022DB</p>
+
+<input type="file"><br><br>
+
+<button class="btn"
+onclick="document.getElementById('msg').style.display='block'">
+Submit Assignment
+</button>
+
+<div id="msg" style="display:none;margin-top:15px;background:#d1fae5;padding:15px;border-radius:10px">
+<h3>✅ Assignment Submitted Successfully</h3>
+
+<p><b>Assignment:</b> Web Development Assignment</p>
+<p><b>Status:</b> Submitted</p>
+
+<button class="btn"
+onclick="document.getElementById('view').style.display='block'">
+View Submitted Assignment
+</button>
+</div>
+
+<div id="view" style="display:none;margin-top:15px;background:#eef2ff;padding:15px;border-radius:10px">
+<h3>📄 Submitted Assignment</h3>
+
+<p><b>Student:</b> Sabiha Naz</p>
+<p><b>Roll No:</b> 25DPCS022DB</p>
+<p><b>Subject:</b> Web Development</p>
+<p><b>Submission Status:</b> ✅ Submitted</p>
+</div>
+
+</div>
+
+</body>
+</html>

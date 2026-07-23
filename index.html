@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+
+.performance{
+    width:90%;
+    max-width:700px;
+    margin:25px auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px gray;
+    overflow-x:auto;
+}
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+
+<div id="sidebar" class="sidebar">
+
+<button class="close-btn" onclick="closeMenu()">×</button>
+
+<h2>Student Dashboard</h2>
+
+<a href="index.html">🏠 Home</a>
+<a href="profile.html">👤 Student Profile</a>
+<a href="academic.html">📚 Academic Details</a>
+<a href="result.html">📊 Result</a>
+<a href="attendance.html">📅 Attendance</a>
+<a href="timetable.html">🕒 Time Table</a>
+<a href="assignment.html">📝 Assignment</a>
+<a href="fee.html">💰 Fee Details</a>
+
+</div>
+    <h2>Student Portal</h2>
+    <a href="#">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="welcome-box">
+    <h1>🎓 Student Dashboard</h1>
+    <p>Sabiha Naz</p>
+    <span>Diploma in Computer Science Engineering</span>
+</div>
+
+<div class="summary-container">
+
+    <div class="summary-card">
+        <h2>📚</h2>
+        <h3>Total Courses</h3>
+        <p>24 Subjects</p>
+    </div>
+
+    <div class="summary-card">
+        <h2>📊</h2>
+        <h3>Attendance</h3>
+        <p>91%</p>
+    </div>
+
+    <div class="summary-card">
+        <h2>⭐</h2>
+        <h3>Average Marks</h3>
+        <p>88%</p>
+    </div>
+
+    <div class="summary-card">
+        <h2>🎓</h2>
+        <h3>Semester</h3>
+        <p>3rd Semester</p>
+    </div>
+
+</div>
+
+    <h1>Student Dashboard</h1>
+
+    <div class="card">
+    <h2>Student Profile</h2>
+
+    
+
+    <p>Name: Sabiha Naz</p>
+    <p>Course: Diploma in Computer Science Engineering</p>
+    <p>Semester: 3rd</p>
+      <a href="profile.html">
+    <button>View Student Profile</button>
+      </a>
+    </div>
+
+    <div class="card">
+    <h2>Academic Details</h2>
+
+    <div class="academic-box">
+
+<div class="card">
+<h3>Total Courses</h3>
+<h1>11</h1>
+<p>Completed Courses</p>
+</div>
+
+<div class="card">
+<h3>Attendance</h3>
+<h1>92%</h1>
+<p>Overall Attendance</p>
+</div>
+
+<div class="card">
+<h3>Average Marks</h3>
+<h1>88%</h1>
+<p>Academic Performance</p>
+</div>
+
+</div>
+
+
+<div class="performance">
+
+<h2>Academic Performance Details</h2>
+
+<table>
+
+<tr>
+<th>Semester</th>
+<th>Total Marks</th>
+<th>Percentage</th>
+<th>SGPA</th>
+<th>CGPA</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>1st Semester</td>
+<td>927/1050</td>
+<td>88.28%</td>
+<td>8.8</td>
+<td>8.8</td>
+<td>PASS</td>
+</tr>
+
+<tr>
+<td>2nd Semester</td>
+<td>850/900</td>
+<td>94.44%</td>
+<td>9.2</td>
+<td>9.0</td>
+<td>PASS</td>
+</tr>
+
+<tr>
+<td>3rd Semester</td>
+<td>860/900</td>
+<td>95.55%</td>
+<td>9.4</td>
+<td>9.2</td>
+<td>PASS</td>
+</tr>
+
+</table>
+
+</div>
+
+    </div>
+  <div class="card">
+    <h2>Course Registration</h2>
+
+    <form>
+        <label>Select Course:</label>
+
+        <select>
+            <option>Web Development</option>
+            <option>Python Programming</option>
+            <option>Database Management System</option>
+            <option>Computer Networks</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="showMessage()">Register Course</button>
+    </form>
+
+  </div>
+  <div class="card">
+    <h2>Marks Details</h2>
+<a href="result.html">
+    <button>View Full Result</button>
+</a>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr>
+            <td>Web Development</td>
+            <td>85</td>
+        </tr>
+
+        <tr>
+            <td>Python</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>DBMS</td>
+            <td>88</td>
+        </tr>
+    </table>
+  </div>
+  <div class="card">
+    <h2>Attendance</h2>
+<a href="attendance.html">
+    <button>View Attendance</button>
+</a>
+    <p>Overall Attendance: 90%</p>
+
+    <progress value="90" max="100"></progress>
+
+  </div>
+  <div class="card">
+    <h2>Admit Card</h2>
+
+    <p>Name: Sabiha Naz</p>
+    <p>Course: Diploma in Computer Science Engineering</p>
+    <p>Semester: 3rd</p>
+    <p>Exam: Semester Examination</p>
+
+    <a href="admitcard.html">
+    <button>Download Admit Card</button>
+    </a>
+  </div>
+  <div class="card" onclick="location.href='assignment.html'">
+    <h2>📝 Assignments</h2>
+    <p>View & Submit Assignments</p>
+  </div>
+  <div class="card" onclick="location.href='timetable.html'">
+    <h2>📅 Time Table</h2>
+    <p>View Semester Wise Time Table</p>
+  </div>
+  <div class="card" onclick="location.href='fee.html'">
+    <h2>💰 Fee Details</h2>
+    <p>View Fee Status & Payment Details</p>
+  </div>
+<script src="script.js"></script>
+  <footer>
+    <p>© 2026 Student Dashboard | Created by Sabiha Naz</p>
+  </footer>
+  <script>
+function openMenu(){
+document.getElementById("sidebar").classList.add("active");
+}
+
+function closeMenu(){
+document.getElementById("sidebar").classList.remove("active");
+}
+  </script>
+</body>
+</html>

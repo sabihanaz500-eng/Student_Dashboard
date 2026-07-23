@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance Details</title>
+
+<style>
+body{
+font-family:Arial;
+background:#eef2ff;
+}
+
+.card{
+width:90%;
+max-width:700px;
+margin:30px auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 10px gray;
+}
+
+.header{
+background:#2563eb;
+color:white;
+text-align:center;
+padding:15px;
+border-radius:10px;
+}
+
+select{
+padding:10px;
+font-size:16px;
+margin:20px 0;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid gray;
+padding:8px;
+text-align:center;
+}
+
+th{
+background:#2563eb;
+color:white;
+}
+
+.summary{
+background:#dcfce7;
+padding:15px;
+margin-top:20px;
+border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="header">
+<h1>Attendance Details</h1>
+<p>Diploma in Computer Science Engineering</p>
+</div>
+
+<h3>Select Semester</h3>
+
+<select onchange="showAttendance(this.value)">
+
+<option>Select Semester</option>
+<option value="1">1st Semester</option>
+<option value="2">2nd Semester</option>
+<option value="3">3rd Semester</option>
+
+</select>
+
+<div id="attendance"></div>
+
+</div>
+
+
+<script>
+
+function showAttendance(sem){
+
+let subjects="";
+
+let data="";
+
+
+if(sem=="1"){
+
+subjects=[
+"Mathematics",
+"Physics",
+"Engineering Mechanics",
+"Environmental Science",
+"FEEE",
+"Engineering Physics Lab",
+"Engineering Mechanics Lab",
+"Engineering Workshop Lab",
+"Chemistry",
+"Engineering Graphics",
+"Communication Skills"
+];
+
+data="<h2>1st Semester Attendance</h2>";
+
+}
+
+
+else if(sem=="2"){
+
+subjects=[
+"Mathematics",
+"Physics",
+"Introduction to IT System",
+"Chemistry",
+"Sports and Yoga",
+"Physics Lab",
+"Chemistry Lab",
+"Graphics Lab",
+"IT Lab"
+];
+
+data="<h2>2nd Semester Attendance</h2>";
+
+}
+
+
+else if(sem=="3"){
+
+subjects=[
+"Web Development",
+"Python Programming",
+"Database Management System (DBMS)",
+"Computer Networks"
+];
+
+data="<h2>3rd Semester Attendance</h2>";
+
+}
+
+
+if(subjects!=""){
+
+data+="<table><tr><th>Subject</th><th>Attendance</th></tr>";
+
+for(let i=0;i<subjects.length;i++){
+
+data+="<tr><td>"+subjects[i]+"</td><td>"+(88+i%8)+"%</td></tr>";
+
+}
+
+data+="</table>";
+
+data+=`
+
+<div class="summary">
+
+<b>Overall Attendance:</b> 92% <br><br>
+
+<b>Status:</b> Eligible for Examination
+
+</div>
+
+`;
+
+}
+
+document.getElementById("attendance").innerHTML=data;
+
+}
+
+</script>
+
+</body>
+</html>
